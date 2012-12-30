@@ -3,7 +3,7 @@ var express = require('express'),
  
 var app = express();
 
-// allow cors requests
+// setting up cors requests allowing you to call this site using ajax
 app.use(function(req, res, next) {
     var oneof = false;
     if(req.headers.origin) {
@@ -30,9 +30,10 @@ app.use(function(req, res, next) {
         next();
     }
 });
- 
-app.get('/zip', zip.findAll);
+
+// map route to js method
 app.get('/zip/:id', zip.findById);
- 
+
+// start node.js site
 app.listen(process.env.PORT, process.env.IP);
 console.log('Listening on port ' + process.env.PORT + '...');
