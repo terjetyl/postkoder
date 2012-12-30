@@ -11,8 +11,6 @@ client.on('error', function(err) {
 
 // /zip/0556
 exports.findById = function(req, res) {
-    importToRedis();
-    
     client.get(req.params.id, function(err, reply) {
         res.send(reply);
     });
