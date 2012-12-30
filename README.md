@@ -1,4 +1,4 @@
-# README for a newly created project.
+# Postkoder
 
 Lookup postal address by zip code in the Norwegian postal register
 
